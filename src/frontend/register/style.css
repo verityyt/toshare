@@ -38,3 +38,7 @@ body {
 .textfield:hover {
     background: var(--color-primary-75);
 }
+
+#tf-password {
+    margin-left: 14px;
+}
