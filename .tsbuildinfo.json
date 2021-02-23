@@ -211,9 +211,14 @@
         "signature": "f58c6d0669d1ee04b2fcb0e87fb949b6828602f3f29c7bf6c76a214f16fd50d5",
         "affectsGlobalScope": false
       },
-      "./src/frontend/app.ts": {
-        "version": "29284626b7683c242fb0ff4f630f1ed7e94e1c60f513c381440cac9ee554f0e7",
+      "./src/frontend/home/app.ts": {
+        "version": "070d97d49227f464fc46dbf00c1e95062c1d4b5d08d1ac4c0f00f3996e0c4841",
         "signature": "16acf0dbb851e761e5411ee84a2e11a624016682f0b7182ef45cb7a743371e76",
+        "affectsGlobalScope": true
+      },
+      "./src/frontend/login/app.ts": {
+        "version": "9dd7e18550c061d019499cf438a11438db9ea6357d8e25eca44e8472eae8eaba",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": true
       }
     },
@@ -272,7 +277,8 @@
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts",
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts",
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "./src/frontend/app.ts"
+      "./src/frontend/home/app.ts",
+      "./src/frontend/login/app.ts"
     ]
   },
   "version": "4.1.3"

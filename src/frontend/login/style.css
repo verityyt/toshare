@@ -16,24 +16,25 @@ body {
     color: var(--color-fg);
 }
 
+.text {
+    width: 10%;
+    display: inline;
+}
+
 .textfield {
     width: 250px;
-    display: block;
     font-size: 15px;
+
+    display: inline;
 
     border: 2px solid var(--color-fg);
     border-radius: 5px;
     color: var(--color-fg);
     background: var(--color-bg);
 
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .textfield:hover {
     background: var(--color-primary-75);
-}
-
-.done {
-    text-decoration: line-through;
 }
