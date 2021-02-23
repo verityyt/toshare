@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    font-family: "Rubik", sans-serif;
+    background: #181a1b;
+}
+
+:root {
+    --color-bg: #181a1b;
+    --color-fg: white;
+    --color-primary: #2b7bd3;
+    --color-primary-75: rgba(43, 123, 211, 0.75);
+}
+
+.container {
+    color: var(--color-fg);
+}
+
+.textfield {
+    width: 250px;
+    display: block;
+    font-size: 15px;
+
+    border: 2px solid var(--color-fg);
+    border-radius: 5px;
+    color: var(--color-fg);
+    background: var(--color-bg);
+
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.textfield:hover {
+    background: var(--color-primary-75);
+}
+
+.done {
+    text-decoration: line-through;
+}
