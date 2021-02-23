@@ -5,6 +5,33 @@ body {
     background: #181a1b;
 }
 
+:root {
+    --color-bg: #181a1b;
+    --color-fg: white;
+    --color-primary: #2b7bd3;
+    --color-primary-75: rgba(43, 123, 211, 0.75);
+}
+
 .container {
-    color: white;
+    color: var(--color-fg);
+}
+
+.todo-button {
+    width: 75px;
+    font-size: 15px;
+
+    border: 2px solid var(--color-fg);
+    border-radius: 5px;
+    color: var(--color-fg);
+    background: var(--color-bg);
+}
+
+.todo-button:hover {
+    width: 75px;
+    font-size: 15px;
+
+    border: 2px solid var(--color-fg);
+    border-radius: 5px;
+    color: var(--color-fg);
+    background: var(--color-primary-75);
 }
