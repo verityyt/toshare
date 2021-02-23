@@ -34,12 +34,6 @@ body {
 }
 
 .todo-button:hover {
-    width: 75px;
-    font-size: 15px;
-
-    border: 2px solid var(--color-fg);
-    border-radius: 5px;
-    color: var(--color-fg);
     background: var(--color-primary-75);
 }
 
