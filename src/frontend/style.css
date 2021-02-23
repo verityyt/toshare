@@ -12,6 +12,11 @@ body {
     --color-primary-75: rgba(43, 123, 211, 0.75);
 }
 
+#list {
+    list-style: none;
+    padding-left: 0;
+}
+
 .container {
     color: var(--color-fg);
 }
@@ -24,6 +29,8 @@ body {
     border-radius: 5px;
     color: var(--color-fg);
     background: var(--color-bg);
+
+    margin-left: 20px;
 }
 
 .todo-button:hover {

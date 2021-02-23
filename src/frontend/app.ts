@@ -6,12 +6,13 @@ for (const listItem of list.children) {
 
     button.addEventListener("click", () => {
 
-        if(button.value == "Done") {
+        if (button.value == "Done") {
             title.classList.add("done")
             button.value = "Remove"
-        }else if(button.value == "Remove") {
+        } else if (button.value == "Remove") {
             list.removeChild(listItem)
         }
+
     })
 
 }
