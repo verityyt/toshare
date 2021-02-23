@@ -35,3 +35,7 @@ body {
     color: var(--color-fg);
     background: var(--color-primary-75);
 }
+
+.done {
+    text-decoration: line-through;
+}
