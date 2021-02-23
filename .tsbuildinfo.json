@@ -216,9 +216,9 @@
         "signature": "16acf0dbb851e761e5411ee84a2e11a624016682f0b7182ef45cb7a743371e76",
         "affectsGlobalScope": true
       },
-      "./src/frontend/login/app.ts": {
-        "version": "9dd7e18550c061d019499cf438a11438db9ea6357d8e25eca44e8472eae8eaba",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "./src/frontend/register/app.ts": {
+        "version": "0e52b4b3f0275bbb3b591763d486e36c325932686d82d1bd662a445c1d122ef3",
+        "signature": "44c85e1737ee23ccb27d89db52f047c57f6d89f5cacd5888bffa9aad1779574c",
         "affectsGlobalScope": true
       }
     },
@@ -278,7 +278,7 @@
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts",
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "./src/frontend/home/app.ts",
-      "./src/frontend/login/app.ts"
+      "./src/frontend/register/app.ts"
     ]
   },
   "version": "4.1.3"
