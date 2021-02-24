@@ -6,24 +6,6 @@ let username = document.getElementById("tf-username") as HTMLInputElement
 let password = document.getElementById("tf-password") as HTMLInputElement
 let register = document.getElementById("button") as HTMLInputElement
 
-/*if(new URLSearchParams(window.location.search).get("test") == "true") {
-    console.log("Fetching...")
-
-    window.fetch(`${url}/callback`, {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'include',
-        headers: {
-            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
-            "Access-Control-Allow-Credentials": "true"
-        }
-    }).then(res => { }).catch(error => {
-        console.log(error)
-    })
-
-}*/
-
 register.addEventListener("click", () => {
     let error = document.getElementById("error") as HTMLParagraphElement
 
@@ -41,6 +23,8 @@ register.addEventListener("click", () => {
                 "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
                 "Access-Control-Allow-Credentials": "true"
             }
+        }).then(response => response.json()).then(data => {
+            window.location.assign(data.redirect)
         })
     }
 })
