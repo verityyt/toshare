@@ -9,8 +9,8 @@
           content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
 
     <!-- Title & Icon -->
-    <title>ToShare | Home</title>
-    <link rel="icon" href="../../assets/favicon.png">
+    <title>ToShare | Register</title>
+    <link rel="icon" href="../assets/favicon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -22,24 +22,15 @@
 <body>
 
 <div class="container">
-    <ul id="list">
-        <li>
-            <p class="todo-title">Clean up room</p>
-            <input type="button" value="Done" class="todo-button">
-        </li>
-        <li>
-            <p class="todo-title">Write bad code</p>
-            <input type="button" value="Done" class="todo-button">
-        </li>
-        <li>
-            <p class="todo-title">Play valorant</p>
-            <input type="button" value="Done" class="todo-button">
-        </li>
-        <li>
-            <p class="todo-title">Do sports</p>
-            <input type="button" value="Done" class="todo-button">
-        </li>
-    </ul>
+    <p class="text">Username:</p>
+    <input type="text" id="tf-username" class="textfield">
+    <br>
+    <p class="text">Password:</p>
+    <input type="text" id="tf-password" class="textfield">
+    <br>
+    <input type="button" id="button" value="Register">
+    <br>
+    <p id="error"></p>
 </div>
 
 </body>
