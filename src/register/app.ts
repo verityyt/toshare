@@ -6,7 +6,7 @@ let username = document.getElementById("tf-username") as HTMLInputElement
 let password = document.getElementById("tf-password") as HTMLInputElement
 let register = document.getElementById("button") as HTMLInputElement
 
-if(new URLSearchParams(window.location.search).get("test") == "true") {
+/*if(new URLSearchParams(window.location.search).get("test") == "true") {
     console.log("Fetching...")
 
     window.fetch(`${url}/callback`, {
@@ -22,7 +22,7 @@ if(new URLSearchParams(window.location.search).get("test") == "true") {
         console.log(error)
     })
 
-}
+}*/
 
 register.addEventListener("click", () => {
     let error = document.getElementById("error") as HTMLParagraphElement
