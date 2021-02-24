@@ -27,13 +27,20 @@ if(new URLSearchParams(window.location.search).get("test") == "true") {
 register.addEventListener("click", () => {
     let error = document.getElementById("error") as HTMLParagraphElement
 
-    if(username.value == "" || password.value == "") {
+    if (username.value == "" || password.value == "") {
         error.textContent = "Invalid username or password!"
-
-        console.log("Redirecting...")
-        console.log(`${url}/register`)
-        window.location.assign(`${url}/register`)
-    }else {
+    } else {
         error.textContent = ""
+
+        window.fetch(`${url}/register?username=${username.value}&password=${password.value}`, {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'include',
+            headers: {
+                "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                "Access-Control-Allow-Credentials": "true"
+            }
+        })
     }
 })
