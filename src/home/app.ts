@@ -1,5 +1,20 @@
 const list = document.getElementById("list") as HTMLUListElement
 
+const url2 = "https://toshare.inceptioncloud.net"
+
+fetch(`${url2}/read`, {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'include',
+    headers: {
+        "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+        "Access-Control-Allow-Credentials": "true"
+    }
+}).then(response => response.json()).then(data => {
+    console.log(JSON.stringify(data))
+})
+
 for (const listItem of list.children) {
     const title = listItem.getElementsByClassName("todo-title").item(0) as HTMLParagraphElement
     const button = listItem.getElementsByClassName("todo-button").item(0) as HTMLInputElement
