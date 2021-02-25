@@ -25,10 +25,7 @@ register.addEventListener("click", () => {
                 "username": username.value,
                 "password": password.value
 
-            },
-            body: JSON.stringify({
-
-            })
+            }
         }).then(response => response.json()).then(data => {
             window.location.assign(data.redirect)
         })
