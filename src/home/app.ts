@@ -1,4 +1,6 @@
 const list = document.getElementById("list") as HTMLUListElement
+const error = document.getElementById("error") as HTMLParagraphElement
+const addBtn = document.getElementById("add-button") as HTMLInputElement
 
 const url2 = "https://toshare.inceptioncloud.net"
 
@@ -60,7 +62,6 @@ fetch(`${url2}/read`, {
                             id: listItem.id,
                         }
                     }).then(response => response.json()).then(data => {
-                        console.log(data)
                     })
 
                 } else if (button.value == "Remove") {
@@ -77,7 +78,6 @@ fetch(`${url2}/read`, {
                             id: listItem.id,
                         }
                     }).then(response => response.json()).then(data => {
-                        console.log(data)
                     })
 
                 }
@@ -87,20 +87,36 @@ fetch(`${url2}/read`, {
     }
 })
 
-/*fetch(`${url2}/add`, {
-    method: 'GET',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'include',
-    headers: {
-        "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
-        "Access-Control-Allow-Credentials": "true",
-        "todo": "Help mom"
-    }
-}).then(response => response.json()).then(data => {
 
-    if(data.redirect != null) {
-        window.location.assign(data.redirect)
+addBtn.addEventListener("click", () => {
+
+    const addTextField = document.getElementById("add-textfield") as HTMLInputElement
+
+    if (addTextField.value != "") {
+        error.textContent = ""
+
+        fetch(`${url2}/add`, {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'include',
+            headers: {
+                "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                "Access-Control-Allow-Credentials": "true",
+                "todo": `${addTextField.value}`
+            }
+        }).then(response => response.json()).then(data => {
+
+            if (data.redirect != null) {
+                window.location.assign(data.redirect)
+            } else {
+                window.location.reload()
+            }
+
+        })
+
+    } else {
+        error.textContent = "Please give your new todo a name!"
     }
 
-})*/
+})
