@@ -42,12 +42,29 @@ fetch(`${url2}/read`, {
         for (const listItem of list.children) {
             const title = listItem.getElementsByClassName("todo-title").item(0) as HTMLParagraphElement
             const button = listItem.getElementsByClassName("todo-button").item(0) as HTMLInputElement
+            const todo = listItem.getElementsByClassName("todo-title").item(0) as HTMLParagraphElement
 
             button.addEventListener("click", () => {
 
                 if (button.value == "Done") {
                     title.classList.add("done")
                     button.value = "Remove"
+
+                    fetch(`${url2}/done`, {
+                        method: 'GET',
+                        mode: 'cors',
+                        cache: 'no-cache',
+                        credentials: 'include',
+                        headers: {
+                            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                            "Access-Control-Allow-Credentials": "true",
+                            id: listItem.id,
+                            todo: todo.textContent as string
+                        }
+                    }).then(response => response.json()).then(data => {
+                        console.log(data)
+                    })
+
                 } else if (button.value == "Remove") {
                     list.removeChild(listItem)
                 }
