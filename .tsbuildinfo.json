@@ -216,6 +216,11 @@
         "signature": "0c339390640adcdcdd05a7dd189317e22760cb8799a4efa5ff363d575d5e42f5",
         "affectsGlobalScope": true
       },
+      "./src/login/app.ts": {
+        "version": "b67efb3440dbac771fb4e48c2b1eb92e2d93a24464d40173e37080a4f36cbf9d",
+        "signature": "b21781fd36150c031615ae96eb14047aa6e0778253158a3488f5a8faa05606e1",
+        "affectsGlobalScope": true
+      },
       "./src/register/app.ts": {
         "version": "a44a49672a57e31d7e6213d1abae87571aaab932265cad9381f3f316009c3d4d",
         "signature": "720292941acf07c497894f10ba9d3b3403cfe2d9989905b8b554a046d6babc33",
@@ -278,6 +283,7 @@
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts",
       "c:/users/joshs/appdata/roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "./src/home/app.ts",
+      "./src/login/app.ts",
       "./src/register/app.ts"
     ]
   },

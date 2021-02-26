@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+
+    <!-- Title & Icon -->
+    <title>ToShare | Login</title>
+    <link rel="icon" href="../assets/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <p class="text">Username:</p>
+    <input type="text" id="tf-username" class="textfield">
+    <br>
+    <p class="text">Password:</p>
+    <input type="text" id="tf-password" class="textfield">
+    <br>
+    <input type="button" id="button" value="Login">
+    <br>
+    <p id="error"></p>
+</div>
+
+</body>
+
+<script src="app.js"></script>
+</html>
