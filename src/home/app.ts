@@ -17,6 +17,7 @@ fetch(`${url2}/read`, {
     } else {
         for (const todo of data) {
             const item = document.createElement("li")
+            item.id = todo._id
 
             const paragraph = document.createElement("p")
             paragraph.classList.add("todo-title")
@@ -29,6 +30,7 @@ fetch(`${url2}/read`, {
                 button.value = "Done"
             } else if (todo.status == "done") {
                 button.value = "Remove"
+                paragraph.classList.add("done")
             }
 
             item.appendChild(paragraph)
