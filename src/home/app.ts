@@ -42,7 +42,6 @@ fetch(`${url2}/read`, {
         for (const listItem of list.children) {
             const title = listItem.getElementsByClassName("todo-title").item(0) as HTMLParagraphElement
             const button = listItem.getElementsByClassName("todo-button").item(0) as HTMLInputElement
-            const todo = listItem.getElementsByClassName("todo-title").item(0) as HTMLParagraphElement
 
             button.addEventListener("click", () => {
 
@@ -59,7 +58,6 @@ fetch(`${url2}/read`, {
                             "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
                             "Access-Control-Allow-Credentials": "true",
                             id: listItem.id,
-                            todo: todo.textContent as string
                         }
                     }).then(response => response.json()).then(data => {
                         console.log(data)
