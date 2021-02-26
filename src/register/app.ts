@@ -27,7 +27,13 @@ register.addEventListener("click", () => {
 
             }
         }).then(response => response.json()).then(data => {
-            window.location.assign(data.redirect)
+
+            if(data.redirect != null) {
+                window.location.assign(data.redirect)
+            }else if(data.error != null) {
+                error.textContent = data.error
+            }
+
         })
     }
 })
