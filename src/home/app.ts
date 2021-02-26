@@ -65,6 +65,21 @@ fetch(`${url2}/read`, {
 
                 } else if (button.value == "Remove") {
                     list.removeChild(listItem)
+
+                    fetch(`${url2}/remove`, {
+                        method: 'GET',
+                        mode: 'cors',
+                        cache: 'no-cache',
+                        credentials: 'include',
+                        headers: {
+                            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                            "Access-Control-Allow-Credentials": "true",
+                            id: listItem.id,
+                        }
+                    }).then(response => response.json()).then(data => {
+                        console.log(data)
+                    })
+
                 }
 
             })
