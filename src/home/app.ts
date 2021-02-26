@@ -12,7 +12,11 @@ fetch(`${url2}/read`, {
         "Access-Control-Allow-Credentials": "true"
     }
 }).then(response => response.json()).then(data => {
-    console.log(JSON.stringify(data))
+
+    if(data.redirect != null) {
+        window.location.assign(data.redirect)
+    }
+
 })
 
 for (const listItem of list.children) {
