@@ -24,7 +24,6 @@ login.addEventListener("click", () => {
                 "Access-Control-Allow-Credentials": "true",
                 "username": username2.value,
                 "password": password2.value
-
             }
         }).then(response => response.json()).then(data => {
 
