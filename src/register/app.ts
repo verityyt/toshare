@@ -20,12 +20,14 @@ register.addEventListener("click", () => {
             cache: 'no-cache',
             credentials: 'include',
             headers: {
+                "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
-                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Credentials": "true"
+            },
+            body: JSON.stringify({
                 "username": username.value,
                 "password": password.value
-
-            }
+            })
         }).then(response => response.json()).then(data => {
 
             if(data.redirect != null) {

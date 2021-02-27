@@ -5,7 +5,7 @@ const addBtn = document.getElementById("add-button") as HTMLInputElement
 const url2 = "https://toshare.inceptioncloud.net"
 
 fetch(`${url2}/read`, {
-    method: 'GET',
+    method: 'POST',
     mode: 'cors',
     cache: 'no-cache',
     credentials: 'include',
@@ -52,15 +52,18 @@ fetch(`${url2}/read`, {
                     button.value = "Remove"
 
                     fetch(`${url2}/done`, {
-                        method: 'GET',
+                        method: 'POST',
                         mode: 'cors',
                         cache: 'no-cache',
                         credentials: 'include',
                         headers: {
+                            "Content-Type": "application/json",
                             "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
                             "Access-Control-Allow-Credentials": "true",
-                            id: listItem.id,
-                        }
+                        },
+                        body: JSON.stringify({
+                            id: listItem.id
+                        })
                     }).then(response => response.json()).then(data => {
                     })
 
@@ -68,15 +71,18 @@ fetch(`${url2}/read`, {
                     list.removeChild(listItem)
 
                     fetch(`${url2}/remove`, {
-                        method: 'GET',
+                        method: 'POST',
                         mode: 'cors',
                         cache: 'no-cache',
                         credentials: 'include',
                         headers: {
+                            "Content-Type": "application/json",
                             "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
-                            "Access-Control-Allow-Credentials": "true",
-                            id: listItem.id,
-                        }
+                            "Access-Control-Allow-Credentials": "true"
+                        },
+                        body: JSON.stringify({
+                            id: listItem.id
+                        })
                     }).then(response => response.json()).then(data => {
                     })
 
@@ -96,15 +102,18 @@ addBtn.addEventListener("click", () => {
         error.textContent = ""
 
         fetch(`${url2}/add`, {
-            method: 'GET',
+            method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
             credentials: 'include',
             headers: {
+                "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
-                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Credentials": "true"
+            },
+            body: JSON.stringify({
                 "todo": `${addTextField.value}`
-            }
+            })
         }).then(response => response.json()).then(data => {
 
             if (data.redirect != null) {
