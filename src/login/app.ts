@@ -2,9 +2,9 @@ console.log("Opened page")
 
 const url3 = "https://toshare.inceptioncloud.net"
 
-let username2 = document.getElementById("tf-username") as HTMLInputElement
-let password2 = document.getElementById("tf-password") as HTMLInputElement
-let login = document.getElementById("button") as HTMLInputElement
+let username2 = document.getElementById("username") as HTMLInputElement
+let password2 = document.getElementById("password") as HTMLInputElement
+let login = document.getElementById("login") as HTMLInputElement
 
 login.addEventListener("click", () => {
     let error = document.getElementById("error") as HTMLParagraphElement
