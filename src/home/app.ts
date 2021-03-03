@@ -99,31 +99,34 @@ addBtn.addEventListener("click", () => {
     const addTextField = document.getElementById("add-textfield") as HTMLInputElement
 
     if (addTextField.value != "") {
-        error.textContent = ""
+        if(addTextField.value.length <= 16) {
+            error.textContent = ""
 
-        fetch(`${url2}/add`, {
-            method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            credentials: 'include',
-            headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
-                "Access-Control-Allow-Credentials": "true"
-            },
-            body: JSON.stringify({
-                "todo": `${addTextField.value}`
+            fetch(`${url2}/add`, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'include',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                    "Access-Control-Allow-Credentials": "true"
+                },
+                body: JSON.stringify({
+                    "todo": `${addTextField.value}`
+                })
+            }).then(response => response.json()).then(data => {
+
+                if (data.redirect != null) {
+                    window.location.assign(data.redirect)
+                } else {
+                    window.location.reload()
+                }
+
             })
-        }).then(response => response.json()).then(data => {
-
-            if (data.redirect != null) {
-                window.location.assign(data.redirect)
-            } else {
-                window.location.reload()
-            }
-
-        })
-
+        }else {
+            error.textContent = "Todo name must only be 16 characters long!"
+        }
     } else {
         error.textContent = "Please give your new todo a name!"
     }
