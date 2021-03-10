@@ -12,6 +12,20 @@ body {
     --color-primary-75: rgba(43, 123, 211, 0.75);
 }
 
+#logout {
+    width: 5%;
+    height: 30px;
+
+    font-size: 1.1rem;
+    padding: 4px;
+    float: right;
+
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+    color: var(--color-fg);
+    background: #e74c3c;
+ }
+
 #add-textfield {
     width: 35%;
     height: 15px;
@@ -88,11 +102,11 @@ body {
     color: red;
 }
 
-input[type="button"]:hover {
-    background: var(--color-primary-75);
-}
-
 @media screen and (max-width: 1300px) {
+
+    #logout {
+        width: 8%;
+    }
 
     #add-button {
         width: 7%;
@@ -106,6 +120,11 @@ input[type="button"]:hover {
 
 @media screen and (max-width: 900px) {
 
+    #logout {
+        width: 8%;
+        font-size: 1em;
+    }
+
     #add-textfield {
         width: 60%;
     }
@@ -117,6 +136,10 @@ input[type="button"]:hover {
 }
 
 @media screen and (max-width: 650px) {
+
+    #logout {
+        width: 12%;
+    }
 
     #add-textfield {
         width: 60%;
@@ -137,10 +160,15 @@ input[type="button"]:hover {
     #add-button {
         width: 12%;
     }
-
 }
 
 @media screen and (max-width: 400px) {
+
+    #logout {
+        width: 15%;
+        font-size: 0.8em;
+        height: 25px;
+    }
 
     #add-textfield {
         width: 75%;
@@ -149,6 +177,7 @@ input[type="button"]:hover {
     #add-button {
         width: 15%;
     }
+
 
     #list li {
         width: 60%;
@@ -162,8 +191,14 @@ input[type="button"]:hover {
 
 @media screen and (max-width: 300px) {
 
+    #logout {
+        width: 22%;
+        font-size: 0.8em;
+        height: 25px;
+    }
+
     #add-textfield {
-        width: 70%;
+        width: 65%;
     }
 
     #add-button {
