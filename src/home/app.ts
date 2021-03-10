@@ -1,6 +1,7 @@
 const list = document.getElementById("list") as HTMLUListElement
 const error = document.getElementById("error") as HTMLParagraphElement
 const addBtn = document.getElementById("add-button") as HTMLInputElement
+const lgBtn = document.getElementById("logout-button") as HTMLInputElement
 
 const url2 = "https://toshare.inceptioncloud.net"
 
@@ -130,5 +131,29 @@ addBtn.addEventListener("click", () => {
     } else {
         error.textContent = "Please give your new todo a name!"
     }
+
+})
+
+lgBtn.addEventListener("click", () => {
+
+    fetch(`${url2}/logout`, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'include',
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+            "Access-Control-Allow-Credentials": "true"
+        }
+    }).then(response => response.json()).then(data => {
+
+        if (data.redirect != null) {
+            window.location.assign(data.redirect)
+        } else {
+            window.location.reload()
+        }
+
+    })
 
 })
