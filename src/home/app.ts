@@ -3,7 +3,34 @@ const error = document.getElementById("error") as HTMLParagraphElement
 const addBtn = document.getElementById("add-button") as HTMLInputElement
 const lgBtn = document.getElementById("logout-button") as HTMLInputElement
 
+const usrn = document.getElementById("username") as HTMLParagraphElement
+
 const url2 = "https://toshare.inceptioncloud.net"
+
+fetch(`${url2}/profile`, {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'include',
+    headers: {
+        "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+        "Access-Control-Allow-Credentials": "true"
+    }
+}).then(response => response.json()).then(data => {
+
+    if (data.redirect != null) {
+        window.location.assign(data.redirect)
+    } else {
+        const username = data.username
+
+        if(username != null) {
+            usrn.textContent = username
+        }else {
+            error.textContent = data
+        }
+    }
+
+})
 
 fetch(`${url2}/read`, {
     method: 'POST',
