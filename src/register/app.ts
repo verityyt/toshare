@@ -14,6 +14,12 @@ register.addEventListener("click", () => {
     } else {
         error.textContent = ""
 
+        if(username.value.length <= 12) {
+
+        }else {
+            error.textContent = "Username must be only 12 characters long"
+        }
+
         window.fetch(`${url}/register`, {
             method: 'POST',
             mode: 'cors',
