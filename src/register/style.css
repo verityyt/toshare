@@ -94,6 +94,7 @@ body {
 
     margin-left: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
 
     font-size: 1.4rem;
     padding: 5px;
@@ -102,6 +103,17 @@ body {
     border-radius: 10px;
     color: var(--color-bg);
     background: var(--color-fg);
+}
+
+.a-account {
+    color: var(--color-grey);
+    font-size: 1em;
+
+    margin-left: 20px;
+}
+
+.a-account:hover {
+    color: var(--color-bg);
 }
 
 #username:hover, #password:hover, #register:hover {
@@ -177,12 +189,16 @@ body {
         font-size: 1.2rem;
     }
 
+    .a-account {
+        font-size: 0.8em;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
     .container {
         width: 50%;
-        height: 310px;
+        height: 350px;
 
         margin-top: 5%;
     }
@@ -215,6 +231,10 @@ body {
         font-size: 0.6rem;
         border-radius: 7px;
         margin-left: 3px;
+    }
+
+    .a-account {
+        font-size: 0.6em;
     }
 
 }
