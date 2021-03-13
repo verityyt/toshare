@@ -8,6 +8,7 @@ body {
 :root {
     --color-bg: #181a1b;
     --color-bg-10: rgba(24, 26, 27, 0.1);
+    --color-grey: rgba(40, 40, 40, 0.53);
     --color-fg: white;
     --color-primary: #2b7bd3;
     --color-primary-75: rgba(43, 123, 211, 0.75);
@@ -94,6 +95,7 @@ body {
 
     margin-left: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
 
     font-size: 1.4rem;
     padding: 5px;
@@ -102,6 +104,17 @@ body {
     border-radius: 10px;
     color: var(--color-bg);
     background: var(--color-fg);
+}
+
+.no-account {
+    color: var(--color-grey);
+    font-size: 1em;
+
+    margin-left: 20px;
+}
+
+.no-account:hover {
+    color: var(--color-bg);
 }
 
 #username:hover, #password:hover, #login:hover {
@@ -177,12 +190,16 @@ body {
         font-size: 1.2rem;
     }
 
+    .no-account {
+        font-size: 0.8em;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
     .container {
         width: 50%;
-        height: 310px;
+        height: 350px;
 
         margin-top: 5%;
     }
@@ -215,6 +232,10 @@ body {
         font-size: 0.6rem;
         border-radius: 7px;
         margin-left: 3px;
+    }
+
+    .no-account {
+        font-size: 0.6em;
     }
 
 }
