@@ -8,6 +8,7 @@ body {
 :root {
     --color-bg: #181a1b;
     --color-bg-10: rgba(24, 26, 27, 0.1);
+    --color-grey: rgba(40, 40, 40, 0.53);
     --color-fg: white;
     --color-primary: #2b7bd3;
     --color-primary-75: rgba(43, 123, 211, 0.75);
