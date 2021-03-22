@@ -212,17 +212,17 @@
         "affectsGlobalScope": false
       },
       "./src/home/app.ts": {
-        "version": "40aa4fd6ab6dd37f23bd01328564c846e0b279e4ec2a840cdecb15a360907a7b",
+        "version": "5ab7905a996580ffa307b035c2ee98ec6b5d4251eb071478125449db341a4230",
         "signature": "d09def513eef0b58472954d5ffed720444e41bfd9fccc3e4837d414d523b4057",
         "affectsGlobalScope": true
       },
       "./src/login/app.ts": {
-        "version": "7dce90aadab14d0e013be3761cbbc0b5b997a6027237695e8dd54fa057e6ca70",
+        "version": "9bc832f5c3bc4f8fb0e1e150c12a226b681da7be373d73de478670fb18ece666",
         "signature": "b21781fd36150c031615ae96eb14047aa6e0778253158a3488f5a8faa05606e1",
         "affectsGlobalScope": true
       },
       "./src/register/app.ts": {
-        "version": "c7eb0a75f5328c4049bf53e2de8c973916565ee7230758119ad74d887c4b4066",
+        "version": "427072ed8f70bd78fb32f4944dd1c466141f85ccf8200529333dc90f3f22bca8",
         "signature": "720292941acf07c497894f10ba9d3b3403cfe2d9989905b8b554a046d6babc33",
         "affectsGlobalScope": true
       }
