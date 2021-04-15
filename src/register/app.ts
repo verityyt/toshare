@@ -1,6 +1,6 @@
 console.log("Opened page")
 
-const url = "https://toshare.inceptioncloud.net"
+const url = "https://toshare-backend.verity-network.de"
 
 let username = document.getElementById("username") as HTMLInputElement
 let password = document.getElementById("password") as HTMLInputElement
@@ -27,7 +27,7 @@ register.addEventListener("click", () => {
             credentials: 'include',
             headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
                 "Access-Control-Allow-Credentials": "true"
             },
             body: JSON.stringify({

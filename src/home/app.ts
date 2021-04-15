@@ -5,7 +5,7 @@ const lgBtn = document.getElementById("logout-button") as HTMLInputElement
 
 const usrn = document.getElementById("username") as HTMLParagraphElement
 
-const url2 = "https://toshare.inceptioncloud.net"
+const url2 = "https://toshare-backend.verity-network.de"
 
 fetch(`${url2}/profile`, {
     method: 'POST',
@@ -13,7 +13,7 @@ fetch(`${url2}/profile`, {
     cache: 'no-cache',
     credentials: 'include',
     headers: {
-        "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+        "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
         "Access-Control-Allow-Credentials": "true"
     }
 }).then(response => response.json()).then(data => {
@@ -38,7 +38,7 @@ fetch(`${url2}/read`, {
     cache: 'no-cache',
     credentials: 'include',
     headers: {
-        "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+        "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
         "Access-Control-Allow-Credentials": "true"
     }
 }).then(response => response.json()).then(data => {
@@ -86,7 +86,7 @@ fetch(`${url2}/read`, {
                         credentials: 'include',
                         headers: {
                             "Content-Type": "application/json",
-                            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                            "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
                             "Access-Control-Allow-Credentials": "true",
                         },
                         body: JSON.stringify({
@@ -105,7 +105,7 @@ fetch(`${url2}/read`, {
                         credentials: 'include',
                         headers: {
                             "Content-Type": "application/json",
-                            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                            "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
                             "Access-Control-Allow-Credentials": "true"
                         },
                         body: JSON.stringify({
@@ -137,7 +137,7 @@ addBtn.addEventListener("click", () => {
                 credentials: 'include',
                 headers: {
                     "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+                    "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
                     "Access-Control-Allow-Credentials": "true"
                 },
                 body: JSON.stringify({
@@ -170,7 +170,7 @@ lgBtn.addEventListener("click", () => {
         credentials: 'include',
         headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://inceptioncloud.net/toshare/",
+            "Access-Control-Allow-Origin": "https://toshare.verity-network.de",
             "Access-Control-Allow-Credentials": "true"
         }
     }).then(response => response.json()).then(data => {
